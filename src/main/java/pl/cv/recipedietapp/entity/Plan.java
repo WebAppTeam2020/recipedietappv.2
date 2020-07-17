@@ -17,8 +17,6 @@ public class Plan {
     private String description;
     private LocalDateTime created;
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_plan", joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "plan_id"))
     private List<User> userId = new ArrayList<>();
 
     @PrePersist

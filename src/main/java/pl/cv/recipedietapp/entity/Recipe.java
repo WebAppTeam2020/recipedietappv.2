@@ -23,8 +23,6 @@ public class Recipe {
     @Column(nullable = false, length = 10000)
     private String preparation;
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_recipe", joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "recipe_id"))
     private List<User> userId = new ArrayList<>();
 
     @PrePersist
