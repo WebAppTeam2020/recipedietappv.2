@@ -19,16 +19,16 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("create")
-    @ResponseBody
-    public String createUser() {
-        User user = new User();
-        user.setUsername("Lucas");
-        user.setPassword("admin");
-        user.setEmail("admin@admin.pl");
-        userService.saveUser(user);
-        return "admin";
-    }
+//    @GetMapping("create")
+//    @ResponseBody
+//    public String createUser() {
+//        User user = new User();
+//        user.setUsername("Lucas");
+//        user.setPassword("admin");
+//        user.setEmail("admin@admin.pl");
+//        userService.saveUser(user);
+//        return "login";
+//    }
 
     @GetMapping("admin")
     @ResponseBody
